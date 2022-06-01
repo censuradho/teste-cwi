@@ -6,6 +6,7 @@ const { styled, globalCss: GlobalCss, getCssText, theme, css, keyframes, createT
       background: '#191920',
       heading: '#000',
       textOnBackground: '#fff',
+      foreground: '#fff',
       disabled: '#191920'
     },
     fonts: {
@@ -26,6 +27,9 @@ const { styled, globalCss: GlobalCss, getCssText, theme, css, keyframes, createT
       md: '51.65rem',
       sm: '45rem',
     },
+    radii: {
+      md: '1.25rem'
+    }
   },
   media: {
     sm: '(min-width: 40rem)',
@@ -55,11 +59,13 @@ const globalStyle =  GlobalCss({
 	li: {
 		listStyle: 'none'
 	},
-  main: {
-    '@md': {
-      background: 'Yellow'
-    }
-  }
+
+  strong: {
+    fontWeight: 'bold'
+  },
+  span: {
+    fontWeight: 'lighter'
+  },
 })
 
 export {

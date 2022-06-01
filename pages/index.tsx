@@ -3,13 +3,23 @@ import type { NextPage } from 'next'
 
 import { Container } from 'styles/Global'
 
+import { NFTCard } from 'components/pages'
+import { useMemo } from 'react'
+
 const Home: NextPage = () => {
   const [nfts] = useNFT()
 
-  console.log(nfts)
+  const renderNFTCards = useMemo(() => nfts.map(value => (
+    <NFTCard 
+      key={value.id}
+      {...value}
+    />
+  ))
+  , [nfts])
+
   return (
     <Container>
-      <h1>hello world</h1>
+      {renderNFTCards}
     </Container>
   )
 }
