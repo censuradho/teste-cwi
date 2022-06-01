@@ -15,8 +15,15 @@ export const Button = styled('button', {
   height: '2.5rem',
   transition: '.2s',
 
+  '&[disabled]': {
+    background: '$disabled',
+    cursor: 'default',
+    '&:hover': {
+      opacity: 1,
+    },
+  },
   '&:hover': {
-    background: '$heading',
+    opacity: 0.7,
   },
 
   variants: {
@@ -24,6 +31,7 @@ export const Button = styled('button', {
       true: {
         width: '100%'
       }
-    }
+    },
+
   }
 })

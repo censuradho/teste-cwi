@@ -8,14 +8,19 @@ import { Button, Flex } from 'components/base'
 
 import EtherSvg from 'assets/ether.svg'
 
-interface NFTCardProps extends NFT {}
+interface NFTCardProps extends NFT {
+  onPurchase?: () => void;
+  disabled?: boolean;
+}
 
 function BaseNFTCard ({
   image,
   collection,
   id,
-  price
-,}: NFTCardProps) {
+  price,
+  onPurchase,
+  disabled
+}: NFTCardProps) {
   return (
     <Styles.Container>
       <Styles.Thumb>
@@ -39,7 +44,10 @@ function BaseNFTCard ({
           </Flex>
         </Flex>
         <Styles.Id>{`#${id}`}</Styles.Id>
-        <Button fullWidth>Comprar</Button>
+        <Button 
+          disabled={disabled} 
+          onClick={onPurchase} 
+          fullWidth>Comprar</Button>
       </Styles.Body>
     </Styles.Container>
   )

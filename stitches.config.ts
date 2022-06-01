@@ -7,7 +7,7 @@ const { styled, globalCss: GlobalCss, getCssText, theme, css, keyframes, createT
       heading: '#000',
       textOnBackground: '#fff',
       foreground: '#fff',
-      disabled: '#191920'
+      disabled: '#8C8C8F'
     },
     fonts: {
 			text: 'Roboto, serif',
