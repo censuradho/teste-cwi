@@ -60,7 +60,9 @@ const globalStyle =  GlobalCss({
 	li: {
 		listStyle: 'none'
 	},
-
+  a: {
+    textDecoration: 'none',
+  },
   strong: {
     fontWeight: 'bold'
   },

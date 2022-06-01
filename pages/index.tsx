@@ -10,7 +10,7 @@ import { useWallet } from 'context'
 
 import * as Styles from 'styles/Home'
 import { NFT } from 'types/nft'
-import { MainLayout } from 'layout/MainLaout'
+import { MainLayout } from 'layout/MainLayout'
 
 const Home: NextPageWithLayout = () => {
   const { setNfts, nfts: walletNfts } = useWallet()
