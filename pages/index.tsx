@@ -1,8 +1,12 @@
 import type { NextPage } from 'next'
 
+import { Container } from 'styles/Global'
+
 const Home: NextPage = () => {
   return (
-    <div></div>
+    <Container>
+      <h1>hello world</h1>
+    </Container>
   )
 }
 

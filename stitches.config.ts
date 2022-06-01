@@ -16,8 +16,22 @@ const { styled, globalCss: GlobalCss, getCssText, theme, css, keyframes, createT
       md: '1rem',
       sm: '0.875rem',
       xs: '0.75rem'
-    }
-  }
+    },
+    space: {
+      sm: '1rem',
+      xs: '0.85rem',
+    },
+    sizes: {
+      lg: '63.93rem',
+      md: '51.65rem',
+      sm: '45rem',
+    },
+  },
+  media: {
+    sm: '(min-width: 40rem)',
+    md: '(min-width: 70.625rem)',
+    lg: '(min-width: 81rem)',
+  },
 })
 
 const globalStyle =  GlobalCss({
@@ -41,6 +55,11 @@ const globalStyle =  GlobalCss({
 	li: {
 		listStyle: 'none'
 	},
+  main: {
+    '@md': {
+      background: 'Yellow'
+    }
+  }
 })
 
 export {
