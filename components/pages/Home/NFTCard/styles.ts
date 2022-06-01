@@ -10,13 +10,9 @@ export const Container = styled('div', {
 export const Thumb = styled('div', {
   width: '100%',
   height: '20rem',
-})
-
-export const ThumbImg = styled('img', {
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
+  position: 'relative',
   borderRadius: '$md',
+  overflow: 'hidden'
 })
 
 export const Body = styled('div', {

@@ -5,6 +5,7 @@ import * as Styles from './styles'
 import type { NFT } from 'types/nft'
 
 import { Button, Flex, Icon } from 'components/base'
+import Image from 'next/image';
 
 interface NFTCardProps extends NFT {
   onPurchase?: () => void;
@@ -22,7 +23,9 @@ function BaseNFTCard ({
   return (
     <Styles.Container>
       <Styles.Thumb>
-        <Styles.ThumbImg 
+        <Image
+          layout="fill"
+          objectFit="cover" 
           src={image?.previewUrl} 
           alt={`NFT image collection ${collection?.name}`} 
         />
