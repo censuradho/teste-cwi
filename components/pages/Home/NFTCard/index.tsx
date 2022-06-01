@@ -4,7 +4,7 @@ import * as Styles from './styles'
 
 import type { NFT } from 'types/nft'
 
-import { Flex } from 'components/base'
+import { Button, Flex } from 'components/base'
 
 import EtherSvg from 'assets/ether.svg'
 
@@ -39,6 +39,7 @@ function BaseNFTCard ({
           </Flex>
         </Flex>
         <Styles.Id>{`#${id}`}</Styles.Id>
+        <Button fullWidth>Comprar</Button>
       </Styles.Body>
     </Styles.Container>
   )

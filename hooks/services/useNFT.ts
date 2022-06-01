@@ -3,7 +3,7 @@ import { getNfts } from "services/nfts";
 
 import type { NFT } from "types/nft";
 
-export function useNFT () {
+export function useNFT (): [NFT[], boolean, Error | null] {
   const [data, setData] = useState<NFT[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<Error | null>(null)

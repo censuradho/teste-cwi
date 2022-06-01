@@ -19,7 +19,9 @@ const Home: NextPage = () => {
 
   return (
     <Container>
-      {renderNFTCards}
+      <main>
+        {renderNFTCards}
+      </main>
     </Container>
   )
 }

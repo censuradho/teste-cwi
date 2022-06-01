@@ -1,17 +1,17 @@
 import { styled } from "stitches.config";
 
 export const Container = styled('div', {
-  height: '27.18rem',
+  minHeight: '27.18rem',
   width: '100%',
   maxWidth: '20rem',
   background: '$foreground',
-  borderRadius: '$md'
+  borderRadius: '$md',
+  paddingBottom: '$sm'
 })
 
 export const Thumb = styled('div', {
   width: '100%',
-  height: '70%',
-  BACKGROUND: 'tomato'
+  height: '20rem',
 })
 
 export const ThumbImg = styled('img', {
@@ -23,6 +23,9 @@ export const ThumbImg = styled('img', {
 
 export const Body = styled('div', {
   padding: '$sm',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '$sm'
 })
 
 export const Name = styled('strong', {
