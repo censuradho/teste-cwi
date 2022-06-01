@@ -1,5 +1,5 @@
-import { useCallback, useMemo } from 'react'
-import type { NextPage } from 'next'
+import { ReactElement, useCallback, useMemo } from 'react'
+import type { NextPageWithLayout } from 'next'
 
 import { useNFT } from 'hooks/services/useNFT'
 
@@ -10,8 +10,9 @@ import { useWallet } from 'context'
 
 import * as Styles from 'styles/Home'
 import { NFT } from 'types/nft'
+import { MainLayout } from 'layout/MainLaout'
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
   const { setNfts, nfts: walletNfts } = useWallet()
 
   const [nfts] = useNFT()
@@ -26,7 +27,6 @@ const Home: NextPage = () => {
   const renderNFTCards = useMemo(() => nfts.map(value => {
     const disabled = walletNfts.map(value => value.id).includes(value.id)
 
-    console.log(disabled)
     return (
       <Styles.Item
         key={value.id}
@@ -42,14 +42,18 @@ const Home: NextPage = () => {
   , [nfts, handleAddNftToWallet, walletNfts])
 
   return (
-    <Container>
-      <main>
-        <Styles.List>
-          {renderNFTCards}
-        </Styles.List>
-      </main>
-    </Container>
+    <main>
+      <Styles.List>
+        {renderNFTCards}
+      </Styles.List>
+    </main>
   )
 }
+
+Home.getLayout = (page: ReactElement) => (
+  <MainLayout>
+      {page}
+  </MainLayout>
+)
 
 export default Home
