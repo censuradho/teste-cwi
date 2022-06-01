@@ -1,9 +1,7 @@
 import { styled } from "stitches.config";
 
 export const Container = styled('div', {
-  minHeight: '27.18rem',
   width: '100%',
-  maxWidth: '20rem',
   background: '$foreground',
   borderRadius: '$md',
   paddingBottom: '$sm'

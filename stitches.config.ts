@@ -32,6 +32,7 @@ const { styled, globalCss: GlobalCss, getCssText, theme, css, keyframes, createT
     }
   },
   media: {
+    xm: '(min-width: 32.4rem)',
     sm: '(min-width: 40rem)',
     md: '(min-width: 70.625rem)',
     lg: '(min-width: 81rem)',
