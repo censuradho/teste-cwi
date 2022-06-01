@@ -1,0 +1,1 @@
+export const ETHER_VALUE_BRL = 8864.63

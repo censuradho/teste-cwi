@@ -4,9 +4,7 @@ import * as Styles from './styles'
 
 import type { NFT } from 'types/nft'
 
-import { Button, Flex } from 'components/base'
-
-import EtherSvg from 'assets/ether.svg'
+import { Button, Flex, Icon } from 'components/base'
 
 interface NFTCardProps extends NFT {
   onPurchase?: () => void;
@@ -39,7 +37,7 @@ function BaseNFTCard ({
             gap={1} 
             alignItems="center"
           >
-            <EtherSvg />
+            <Icon name="ether" />
             <Styles.Amount>{price}</Styles.Amount>
           </Flex>
         </Flex>

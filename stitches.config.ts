@@ -28,6 +28,7 @@ const { styled, globalCss: GlobalCss, getCssText, theme, css, keyframes, createT
       sm: '45rem',
     },
     radii: {
+      sm: '0.31rem',
       md: '1.25rem'
     }
   },
@@ -45,7 +46,27 @@ const globalStyle =  GlobalCss({
 		margin: '0',
 		boxSizing: 'border-box',
 		fontFamily: '$text',
-		color: '$heading'
+		color: '$heading',
+      /* width */
+      '&::-webkit-scrollbar': {
+        width: '10px',
+      },
+  
+    /* Track */
+    '&::-webkit-scrollbar-track': {
+      background: '#f1f1f1',
+      borderRadius: '100px'
+  
+    },
+  
+    /* Handle */
+    '&::-webkit-scrollbar-thumb': {
+      background: '#888',
+    },
+    /* Handle on hover */
+    '&::-webkit-scrollbar-thumb:hover': {
+      background: '#555',
+    }
 	},
   button: {
 		background: 'none',
@@ -62,6 +83,7 @@ const globalStyle =  GlobalCss({
 	},
   a: {
     textDecoration: 'none',
+    cursor: 'pointer'
   },
   strong: {
     fontWeight: 'bold'

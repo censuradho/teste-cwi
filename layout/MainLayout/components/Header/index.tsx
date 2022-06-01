@@ -16,8 +16,12 @@ function BaseHeader (props: HeaderProps) {
 
   return (
     <Styles.Container>
-      <Logo />
-
+      <LinkNext href="/">
+        <a>
+          <Logo />
+        </a>
+      </LinkNext>
+      <LinkNext href="/wallet">
         <Styles.Link>
             <Flex gap={0.5}>
               <Flex flexDirection="column">
@@ -27,6 +31,7 @@ function BaseHeader (props: HeaderProps) {
               <WalletSvg />
             </Flex>
         </Styles.Link>
+      </LinkNext>
     </Styles.Container>
   )
 }
