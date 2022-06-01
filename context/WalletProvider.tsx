@@ -14,7 +14,7 @@ import { NFT } from 'types/nft'
 
 import { ETHER_VALUE_BRL } from 'constants/nft'
 import { toCurrency } from 'lib/helpers';
-import { useLocalStorage } from 'hooks/services/useLocalStorage';
+import { useLocalStorage } from 'hooks/useLocalStorage';
 
 interface Wallet {
   nfts: NFT[];
