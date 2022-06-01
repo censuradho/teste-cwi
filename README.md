@@ -1,12 +1,14 @@
 # Teste Front-end CWI | eCommerce-NFC
 
+<img src="https://media.giphy.com/media/ahcCj4odGZqlMjmMB8/giphy.gif" width="200px" />
+
 O objetivo desse desafio é criar uma pequena lojinha de NFTs onde teremos uma listagem dos NFTs disponíveis para compra e a possibilidade de adicioná-los a uma carteira.
 
 [preview do projeto](https://e-nfc.vercel.app/)
 
 ➡️ Requisitos do software:
 
-Você pode encontrar todas os requisitos [aqui](https://github.com/users/censuradho/projects/3)
+Você pode encontrar todos os requisitos [aqui](https://github.com/users/censuradho/projects/3)
 
 ## Ambiente DEV
 
