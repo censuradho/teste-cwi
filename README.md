@@ -6,9 +6,8 @@ O objetivo desse desafio é criar uma pequena lojinha de NFTs onde teremos uma l
 
 ## Links
 
-[preview da aplicação](https://e-nfc.vercel.app/)
-
-[preview da UI FIGMA](https://www.figma.com/file/XDdz8Piw7dhor7reeAWKDT/Arezzo%26Co-Store?node-id=0%3A1)
+- [preview da aplicação](https://e-nfc.vercel.app/)
+- [preview da UI FIGMA](https://www.figma.com/file/XDdz8Piw7dhor7reeAWKDT/Arezzo%26Co-Store?node-id=0%3A1)
 
 ## Requisitos do software:
 
