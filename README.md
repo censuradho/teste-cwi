@@ -1,4 +1,4 @@
-# Teste Front-end CWI | eCommerce-NFC
+# Teste Front-end CWI | eCommerce-NFT
 
 <img src="https://media.giphy.com/media/ahcCj4odGZqlMjmMB8/giphy.gif" width="200px" />
 
