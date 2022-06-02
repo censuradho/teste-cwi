@@ -4,9 +4,13 @@
 
 O objetivo desse desafio é criar uma pequena lojinha de NFTs onde teremos uma listagem dos NFTs disponíveis para compra e a possibilidade de adicioná-los a uma carteira.
 
-[preview do projeto](https://e-nfc.vercel.app/)
+## Links
 
-➡️ Requisitos do software:
+[preview daprojeto](https://e-nfc.vercel.app/)
+
+[preview da UI FIGMA](https://www.figma.com/file/XDdz8Piw7dhor7reeAWKDT/Arezzo%26Co-Store?node-id=0%3A1)
+
+## Requisitos do software:
 
 Você pode encontrar todos os requisitos [aqui](https://github.com/users/censuradho/projects/3)
 
