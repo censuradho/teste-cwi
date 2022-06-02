@@ -23,7 +23,7 @@ Na raiz do projeto
 
 ```bash
 npm install
-# or
+# ou
 yarn install
 ```
 
@@ -39,7 +39,7 @@ NEXT_PUBLIC_API_URL="http://localhost:3000/api"
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
 ```
 
