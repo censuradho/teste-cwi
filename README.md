@@ -12,6 +12,11 @@ Você pode encontrar todos os requisitos [aqui](https://github.com/users/censura
 
 ## Ambiente DEV
 
+- [Requisitos](#requisitos)
+- [Instalação](#instalação)
+- [Configuração](#configuração)
+- [Rodar o ambiente dev](#rodar-o-ambiente-dev)
+
 ### Requisitos
 
 - [Node.js](https://nodejs.org/en/)
