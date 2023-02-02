@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { nftService } from "services/nft";
 import { getNfts } from "services/nfts";
 
 import type { NFT } from "types/nft";
@@ -12,7 +13,7 @@ export function useNFT (): [NFT[], boolean, Error | null] {
     try {
       setIsLoading(true)
 
-      const { data } = await getNfts()
+      const { data } = await nftService.findMany()
 
       setData(data || [])
 

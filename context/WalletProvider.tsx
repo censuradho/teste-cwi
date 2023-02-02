@@ -1,20 +1,13 @@
-import { 
-  createContext, 
-  Dispatch, 
-  ReactNode, 
-  SetStateAction, 
-  useCallback, 
-  useContext, 
-  useEffect, 
-  useMemo, 
-  useState 
-} from 'react'
+import {
+  createContext, ReactNode, useCallback,
+  useContext, useMemo
+} from 'react';
 
-import { NFT } from 'types/nft'
+import { NFT } from 'types/nft';
 
-import { ETHER_VALUE_BRL } from 'constants/nft'
-import { toCurrency } from 'lib/helpers';
+import { ETHER_VALUE_BRL } from 'constants/nft';
 import { useLocalStorage } from 'hooks/useLocalStorage';
+import { toCurrency } from 'lib/helpers';
 
 interface Wallet {
   nfts: NFT[];

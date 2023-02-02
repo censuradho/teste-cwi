@@ -1,51 +1,27 @@
-import { ReactElement, useCallback, useMemo } from 'react'
-import type { NextPageWithLayout } from 'next'
+import { HomeLayout } from "layout/home";
+import { HomeProps } from "layout/home/types";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { nftService } from "services/nft";
 
-import { useNFT } from 'hooks/services/useNFT'
+export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
+  const { data } = await nftService.findMany()
 
-import { NFTCard } from 'components/pages'
-import { useWallet } from 'context'
+  if (!data) return {
+    notFound: true,
+    revalidate: 10
+  }
+  
+  return {
+    props: {
+      data
+    },
+    revalidate: 10
+  }
+}
 
-import * as Styles from 'styles/Home'
-import { NFT } from 'types/nft'
-import { MainLayout } from 'layout/MainLayout'
-
-const Home: NextPageWithLayout = () => {
-  const { addNft, nfts: walletNfts } = useWallet()
-
-  const [nfts] = useNFT()
-
-
-  const renderNFTCards = useMemo(() => nfts.map(value => {
-    const disabled = walletNfts.map(value => value.id).includes(value.id)
-
-    return (
-      <Styles.Item
-        key={value.id}
-      >
-      <NFTCard
-        onPurchase={() => addNft(value)}
-        disabled={disabled}
-        {...value}
-      />
-      </Styles.Item>
-    )
-  })
-  , [nfts, addNft, walletNfts])
-
+export default function HomePage (props: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <main>
-      <Styles.List>
-        {renderNFTCards}
-      </Styles.List>
-    </main>
+    <HomeLayout {...props} />
   )
 }
 
-Home.getLayout = (page: ReactElement) => (
-  <MainLayout>
-      {page}
-  </MainLayout>
-)
-
-export default Home
