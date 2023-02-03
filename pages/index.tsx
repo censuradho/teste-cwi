@@ -1,21 +1,19 @@
 import { HomeLayout } from "layout/home";
 import { HomeProps } from "layout/home/types";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import { nftService } from "services/nft";
+
+import path from 'path'
+import fs from 'fs'
 
 export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
-  const { data } = await nftService.findMany()
+  const pathFile = path.resolve(process.cwd())
+  const file = fs.readFileSync(pathFile + '/server.json', 'utf-8')
+  const json = JSON.parse(file)
 
-  if (!data) return {
-    notFound: true,
-    revalidate: 10
-  }
-  
   return {
     props: {
-      data
-    },
-    revalidate: 10
+      data: json.nfts
+    }
   }
 }
 
